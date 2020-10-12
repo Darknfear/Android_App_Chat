@@ -27,12 +27,14 @@ class LoginActivity : AppCompatActivity() {
     fun onClick() {
         btnLogin!!.setOnClickListener{
             Toast.makeText(applicationContext, "Hello World", Toast.LENGTH_LONG).show()
-        }
-
-        txtRegister!!.setOnClickListener{
-            val intent = Intent(this, RegisterActivity::class.java)
+            val intent : Intent = Intent(this, ForgetActivity::class.java)
             startActivity(intent)
         }
+
+        txtForget?.setOnClickListener(View.OnClickListener {
+            val intent : Intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+        })
     }
 
 
