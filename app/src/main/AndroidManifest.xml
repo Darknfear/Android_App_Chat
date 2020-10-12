@@ -11,9 +11,9 @@
         android:theme="@style/AppTheme">
         <activity android:name=".view.ForgetActivity"></activity>
         <activity android:name=".view.RegisterActivity" />
-        <activity android:name=".view.HomeActivity" />
+        <activity android:name=".view.LoginActivity" />
         <activity
-            android:name=".view.LoginActivity"
+            android:name=".view.HomeActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
