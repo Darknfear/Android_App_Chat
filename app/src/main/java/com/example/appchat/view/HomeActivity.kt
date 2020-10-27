@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.viewpager.widget.ViewPager
 import com.example.appchat.R
 import com.example.appchat.adapter.ViewPagerAdapter
-import com.example.appchat.fragment.FragmentChat
+import com.example.appchat.fragment.FragmentFriend
 import com.example.appchat.fragment.FragmentNotifications
 import com.example.appchat.fragment.FragmentUser
 import kotlinx.android.synthetic.main.activity_home.*
@@ -20,7 +20,7 @@ class HomeActivity : AppCompatActivity() {
 
     private fun setUpTabs() {
         val adapter = ViewPagerAdapter(supportFragmentManager)
-        adapter.addFragment(FragmentChat(), "Chat")
+        adapter.addFragment(FragmentFriend(), "Friends")
         adapter.addFragment(FragmentNotifications(), "Notifications")
         adapter.addFragment(FragmentUser(), "User")
 
