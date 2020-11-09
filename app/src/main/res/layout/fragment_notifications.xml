@@ -3,17 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.FragmentChat">
+    android:background="@color/new_gray"
+    tools:context=".fragment.FragmentNotifications">
 
-    <RelativeLayout
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <TextView
-            android:layout_width="wrap_content"
-            android:text="Notification"
-            android:layout_centerInParent="true"
-            android:textSize="30dp"
-            android:layout_height="wrap_content" />
-    </RelativeLayout>
+        android:id="@+id/recycler_view_notifi"
+        android:layout_height="match_parent"/>
 
 </FrameLayout>

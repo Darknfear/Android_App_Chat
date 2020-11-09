@@ -16,7 +16,7 @@ import kotlinx.android.synthetic.*
 import kotlinx.android.synthetic.main.fragment_friend.*
 
 class FragmentFriend : Fragment() {
-    //private val ls_friend : ListView ?= null
+    private var listFr : List<String>  = listOf("java", "kotlin", "javascript", "golang")
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,8 +28,12 @@ class FragmentFriend : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 //        // Inflate the layout for this fragment
+        val view = inflater.inflate(R.layout.fragment_friend, container, false)
+        val recyclerView = view.findViewById<RecyclerView>(R.id.recycler_view_friend)
+        recyclerView.layoutManager = LinearLayoutManager(activity)
+        recyclerView.adapter = ListFriendAdapter(listFr)
 
-        return inflater.inflate(R.layout.fragment_friend, container, false)
+        return view
     }
 
 }
